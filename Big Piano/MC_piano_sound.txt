@@ -1,6 +1,6 @@
 set_sched_ahead_time! 0
 live_loop:listen do
-  message = sync "/play_this"
-  note = message[:args][0]
+  message = sync "/osc/play_this"
+  note = message[0]
   play note
 end

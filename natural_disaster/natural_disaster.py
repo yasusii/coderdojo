@@ -7,9 +7,10 @@ from mcpi import block
 
 def meteor(mc, x, z):
     mc.postToChat('Meteor approaching!')
-    y = 64
-    h = mc.getHeight(x, z)
-    x -= (64 -h )
+    y = 64 # この高さから落ちてくる
+    h = mc.getHeight(x, z) # 落下地点の高さ
+    # 隕石はxのマイナス方向からやって来る。(64 - h)落下するので、その分を調整
+    x -= (64 - h)
 
     while y > h:
         y -= 1
